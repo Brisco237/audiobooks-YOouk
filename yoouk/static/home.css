@@ -1,0 +1,49 @@
+body{
+    font-family: 'Poppins';
+}
+/* start landing page custom */
+#landing{
+    height:70vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("images/fond1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius:10px;
+    color: white;
+    padding-top:5em;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+#landing h1{
+    font-size:3.5em;
+}
+
+#landing p{
+    font-size:15px;
+    padding-left:3px;
+    padding-right:3px;
+}
+#landing button a{
+    text-decoration:none;
+    color: black;
+}
+#landing .btn{
+    background-color:#94e0b1;
+    font-weight:200;
+    border-radius:5px;
+    padding:15px;
+}
+/* end landing page custom */
+
+/* start section2 custom */
+#section2 h2{
+    text-transform: capitalize;
+}
+#section2 p{
+    font-size:15px;
+}
+/* end section2 custom */
+
+/* start section3 */
+
+/* end section3 */

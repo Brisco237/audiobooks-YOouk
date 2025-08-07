@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% load socialaccount %}
+{% block title %} Login page {% endblock title %}
+
+{% block styles %} 
+<link rel="stylesheet" href="{% static 'authapp/login.css' %}"> 
+{% endblock styles %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mb-5">
+                <div class="card-header">
+                    <h3 class="text-center"><i class="fas fa-circle-user"></i> LOGIN</h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group mb-4">
+                            <label for="username"><i class="fa fa-user"></i> Nom d'utilisateur</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password1"><i class="fas fa-key"></i> Mot de passe</label>
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn">Se connecter</button>
+                        </div>
+                        <br>
+                        <p class="mb-0">Pas de compte? <a href="{% url 'register_user' %}">Creez un compte ici</a></p>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <p class="mb-0">Se connecter avec : </p>
+                    <div class="social-buttons">
+                        <a href="{% provider_login_url 'google' %}" class="btn btn-google"><img src="{% static 'images/google.png' %}" width="20" height="20">   Google</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+{% endblock %}

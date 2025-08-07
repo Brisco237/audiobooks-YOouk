@@ -1,0 +1,23 @@
+body{
+    font-family: 'Poppins';
+}
+.mesage{
+    margin-top:5px;
+}
+button{
+    background-color: #94e0b1;
+    border:none;
+    padding: 10px;
+    font-weight: 500;
+}
+h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button a{
+    text-decoration: none;
+    color:black;
+}
+button a:hover{
+    color: white;
+}

@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %} Yoouk | Select_PDF {%endblock title %} 
+{% block styles %}<link rel="stylesheet" href="{% static 'readpdf/selectpdf.css' %}"/> {%endblock styles %} 
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5" id="section1">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
+            <h3>UPLOAD YOUR PDF HERE</h3>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <br />
+    <div class="row mt-3 text-center" id="section2">
+        <div class="col-lg-12 mt-5">
+            <h4>Drag and drop PDF here</h4>
+            <p>or select a file from your computer</p>
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="file" accept="application/pdf" required id="fileInput" onchange="showFileName(this)"/>
+                <label for="fileInput" class="file-label">📂 Choisir un PDF</label>
+                <span class="file-name" id="fileName">Aucun fichier</span>
+                <br /><br />
+                <button type="submit">Lire le PDF</button>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-5" id="section3">
+        <div class="col-lg-12">
+            <h3> Ma Bibliotheque : Les PDFs récemment Uploadés</h3>
+            <br />
+            {% if pdf_books %}
+            <ul class="list-group">
+                {% for pdf in pdf_books %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{% url 'audiopdf' slug=pdf.slug %}">{{ pdf.title }}</a>
+                    <span class="text-muted small">{{ pdf.date }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No PDF uploaded yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+  function showFileName(input){
+    const fileName = input.files.length > 0 ? input.files[0].name : "Aucun fichier";
+    document.getElementById("fileName").textContent = fileName;
+  }
+</script>
+{% endblock content %}

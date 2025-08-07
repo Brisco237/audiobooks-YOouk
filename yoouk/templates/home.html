@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Yoouk | Home {% endblock title %}
+{% block styles %} <link rel="stylesheet" href="{% static 'home.css' %}"> {% endblock styles %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-12 text-center" id="landing">
+            <h1>ECOUTEZ VOS PDFs EN AUDIO</h1>
+            <p>Écoutez vos documents où que vous soyez avec Yoouk. Convertissez des pages PDF en fichiers audio de haute qualité pour une écoute facile.</p>
+            <button class="btn"><a href="{% url 'selectpdf' %}">Try it free</a></button>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-lg-12" id="section2">
+            <h2>Comment Yoouk Marche ?</h2>
+            <p>Yoouk transforme vos pages PDF en fichiers audio grâce à des options de voix naturelles, une vitesse de lecture réglable et la mise en surbrillance du texte. Découvrez vos documents d'une nouvelle manière.</p>
+        </div>
+    </div>
+    <div class="row mt-5 mb-5" id="section3">
+        <div class="col-lg-4 col-sm-6" id="card1">
+            <div class="card">
+                <div class="card-img p-2"><img src="{% static 'images/speaker.png' %}" style="height:40px;width:40px;"></div>
+               <div class="card-body">
+                    <h4>Voix naturel</h4>
+                    <p>Choisissez parmi une variété de voix naturelles pour personnaliser votre expérience d'écoute.</p>
+               </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mt-2" id="card2">
+            <div class="card">
+                <div class="card-img p-2"><img src="{% static 'images/compteur.png' %}" style="height:40px;width:40px;"></div>
+               <div class="card-body">
+                    <h4>Réglable de vitesse</h4>
+                    <p>Contrôlez la vitesse de lecture en fonction de votre rythme, que vous ayez besoin d'accélérer ou de ralentir.</p>
+               </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mt-2" id="card3">
+            <div class="card">
+                <div class="card-img p-2"><img src="{% static 'images/text.png' %}" style="height:35px;width:40px;"></div>
+                <div class="card-body">
+                    <h4>Surlignage de texte</h4>
+                    <p>Suivez le texte en surbrillance pendant la lecture audio, améliorant ainsi la compréhension et l'engagement.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mt-2" id="card3">
+            <div class="card">
+                <div class="card-img p-2"><img src="{% static 'images/download.png' %}" style="height:35px;width:40px;"></div>
+                <div class="card-body">
+                    <h4>Télécharger les audios</h4>
+                    <p>YOouk offre la capacité de télécharger les audios de chaque page produit par gTTs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mt-2" id="card3">
+            <div class="card">
+                <div class="card-img p-2"><img src="{% static 'images/play.png' %}" style="height:35px;width:40px;"></div>
+                <div class="card-body">
+                    <h4>barre de progression de lecture</h4>
+                    <p>Suivre la progression lors de l'écoute de vos PDFs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mt-2" id="card3">
+            <div class="card">
+                <div class="card-img p-2"><img src="{% static 'images/suivant.png' %}" style="height:50px;width:50px;"></div>
+                <div class="card-body">
+                    <h4>Pagination de lecture</h4>
+                    <p>Sur YOouk, la posibilité d'aller de page en page de manière fluide.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

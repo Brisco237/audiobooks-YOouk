@@ -1,0 +1,19 @@
+body {
+    font-family: 'Poppins';
+}
+.card .card-body form .d-grid .btn{
+    background-color: #94e0b1;
+    padding: 10px;
+}
+.card .card-body form .d-grid .btn:hover{
+    background-color: #94e0b1;
+    color:white;
+}
+.social-buttons .btn-google{
+    border:1px solid #94e0b1;
+    padding:10px;
+}
+.social-buttons .btn-google:hover{
+    background-color: #94e0b1;
+    color:white;
+}

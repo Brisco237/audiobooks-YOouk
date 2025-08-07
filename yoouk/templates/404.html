@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} YOouk | Page not found {% endblock title %}
+{% block styles %} <link rel="stylesheet" href="{% static '404.css' %}"> {% endblock styles %}
+ 
+{% block content %}
+<div class="container">
+    <div class="row text-center m-4">
+        <div class="col-md-12">
+            <img src="{% static 'images/fond2.png' %}" width="50%" height="70%">
+            <h3 class="message">Oups Error 404 ! Page Not Found</h3>
+            <button><a href="{% url 'home' %}">Retour a l'accueil</a></button>
+        </div>
+    </div>
+</div>
+{% endblock content %}

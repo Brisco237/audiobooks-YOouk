@@ -1,0 +1,42 @@
+body{
+    font-family:'Poppins';
+}
+#section1 p span{
+    font-weight: 200;
+}
+#section1 p strong{
+    text-transform: capitalize;
+}
+#section1 h2{
+    text-transform: uppercase;
+}
+#section2 #text{
+    background-color:#94e0b1;
+    padding:20px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1.8em;
+}
+#section2 .card .card-body .card-text #tts-btn, #pause-btn{
+    background-color: #94e0b1;
+    border:1px solid black;
+}
+#section2 .card .card-body .card-text #tts-btn:hover, #pause-btn:hover{
+    background-color: #94e0b1;
+    color:white;
+}
+#section3 .pagination{
+    margin-top:3em;
+    display: flex;
+    justify-content: space-between;
+}
+#section3 .pagination a, #section3 .pagination span{
+    border: 1px solid black;
+    border-radius:5px;
+    text-decoration: none;
+    padding: 8px;
+    color:black;
+    font-weight: 200;
+    margin-top:1em;
+}
